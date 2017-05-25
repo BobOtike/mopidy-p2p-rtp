@@ -1,10 +1,9 @@
 # Pull base image
 FROM resin/rpi-raspbian:jessie
-MAINTAINER Malte Delfs <dev@maltedelfs.de>
 
 # Install dependencies
 RUN apt-get update && apt-get install -y wget
-RUN wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/wheezy.list
+RUN wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/jessie.list
 RUN apt-get update && apt-get install -y \
 mopidy mopidy-spotify mopidy-spotify-tunigo \
 pulseaudio pulseaudio-utils gstreamer1.0 gstreamer0.10-pulseaudio libsdl1.2debian \
